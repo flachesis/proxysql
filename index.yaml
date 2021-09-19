@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  proxysql:
+  - apiVersion: v2
+    appVersion: 2.3.0
+    created: "2021-09-19T19:05:14.874215552Z"
+    description: A proxysql Helm chart for Kubernetes
+    digest: 408273fd95c8494fce7e6a8c26bfd3f931b101ee19fecc787fe24387ccce7776
+    name: proxysql
+    type: application
+    urls:
+    - https://github.com/flachesis/proxysql/releases/download/proxysql-1.0.0/proxysql-1.0.0.tgz
+    version: 1.0.0
+generated: "2021-09-19T19:05:14.733508026Z"
