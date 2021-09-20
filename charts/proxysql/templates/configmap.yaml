@@ -146,7 +146,7 @@ data:
         username="{{ required "mysql username is required!" $element.username }}"
         password="{{ required "mysql passowrd is required!" $element.password }}"
         use_ssl=0
-        default_hostgroup=1
+        default_hostgroup={{ (add1 (int $element.readOnly | default 0)) }}
         transaction_persistent=1
         active=1
         max_connections={{ $element.maxConnections | default 10000 }}

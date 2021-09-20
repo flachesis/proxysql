@@ -90,6 +90,7 @@ The following table lists the configurable parameters of the ProxySQL chart and 
 | `proxysql.mysql.servers.[].compression`     | Compress data                                            | `false`                                                      |
 | `proxysql.mysql.users.[].username`          | The user for connecting backend                          | `nil`                                                        |
 | `proxysql.mysql.users.[].password`          | The user's password                                      | `nil`                                                        |
+| `proxysql.mysql.users.[].readOnly`          | Does the user is read only                               | `false`                                                      |
 | `proxysql.mysql.users.[].maxConnections`    | The max connections that the proxysql can handle         | `10000`                                                      |
 | `proxysql.mysql.slave.enabled`              | Enable the traditional master/slave replication          | `false`                                                      |
 | `proxysql.mysql.slave.checkType`            | check `read_only`, use `innodb_read_only` for AWS Aurora | `read_only`                                                  |
