@@ -67,7 +67,7 @@ proxysql:
       #   maxConnections: 1000
       #   compression: false
     users: []
-      # - usename: name
+      # - username: name
       #   password: pwd
       #   maxConnections: 10000
     slave:
