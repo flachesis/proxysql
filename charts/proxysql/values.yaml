@@ -70,6 +70,7 @@ proxysql:
       # - username: name
       #   password: pwd
       #   maxConnections: 10000
+      #   readOnly: false
     slave:
       enabled: false
       checkType: "read_only"
