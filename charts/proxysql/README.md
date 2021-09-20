@@ -96,11 +96,11 @@ The following table lists the configurable parameters of the ProxySQL chart and 
 | `proxysql.mysql.galera.enabled`             | Enable the Percona XtraDB Cluster                        | `false`                                                      |
 | `proxysql.mysql.galera.maxWriters`          | The max writers that the proxySQL can use.               | `1`                                                          |
 | `proxysql.mysql.galera.writerAsReader`      | Use the writer as reader                                 | `true`                                                       |
-| `autoscaling.enabled`                           | Enable Autoscaling for pods                          | `false`                                                      |
-| `autoscaling.minReplicas`                       |                                                      | `1`                                                          |
-| `autoscaling.maxReplicas`                       |                                                      | `100`                                                        |
-| `autoscaling.targetCPUUtilizationPercentage`    |                                                      | `80`                                                         |
-| `autoscaling.targetMemoryUtilizationPercentage` |                                                      | `nil`                                                        |
+| `autoscaling.enabled`                           | Enable Autoscaling for pods (only supported when proxysql.cluster.enabled is false) | `false`                       |
+| `autoscaling.minReplicas`                       |                                                                                     | `1`                           |
+| `autoscaling.maxReplicas`                       |                                                                                     | `100`                         |
+| `autoscaling.targetCPUUtilizationPercentage`    |                                                                                     | `80`                          |
+| `autoscaling.targetMemoryUtilizationPercentage` |                                                                                     | `nil`                         |
 | `resources`                                  | [Compute Resource Quota](https://kubernetes.io/docs/concepts/policy/resource-quotas/#compute-resource-quota)                  | `{}` |
 | `nodeSelector`                               | [Pod node selector](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector)                    | `{}` |
 | `tolerations`                                | [Tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)                                  | `[]` |
