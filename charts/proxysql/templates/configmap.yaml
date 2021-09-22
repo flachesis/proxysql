@@ -101,7 +101,7 @@ data:
         hostgroup_id={{- if $element.isWriter }}1{{- else }}2{{- end }}
         hostname="{{ required "mysql server's hostname is required!" $element.hostname }}"
         port={{ $element.port | default 3306 }}
-        weight=1000
+        weight={{ $element.weight | default 1000 }}
         compression={{ (int $element.compression) | default 0 }}
         max_connections={{ $element.maxConnections | default 1000 }}
         use_ssl=0
