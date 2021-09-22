@@ -66,6 +66,7 @@ proxysql:
       #   port: 3306
       #   maxConnections: 1000
       #   compression: false
+      #   weight: 1000
     users: []
       # - username: name
       #   password: pwd

@@ -88,6 +88,7 @@ The following table lists the configurable parameters of the ProxySQL chart and 
 | `proxysql.mysql.servers.[].port`            | MySQL backend's port                                     | `3306`                                                       |
 | `proxysql.mysql.servers.[].maxConnections`  | The max num of conn that the backend can handle          | `1000`                                                       |
 | `proxysql.mysql.servers.[].compression`     | Compress data                                            | `false`                                                      |
+| `proxysql.mysql.servers.[].weight`          | Server weight                                            | `false`                                                      |
 | `proxysql.mysql.users.[].username`          | The user for connecting backend                          | `nil`                                                        |
 | `proxysql.mysql.users.[].password`          | The user's password                                      | `nil`                                                        |
 | `proxysql.mysql.users.[].readOnly`          | Does the user is read only                               | `false`                                                      |
