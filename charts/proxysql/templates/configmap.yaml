@@ -116,7 +116,7 @@ data:
       {
         writer_hostgroup=1
         reader_hostgroup=2
-        check_type={{ .Values.proxysql.mysql.slave.checkType }}
+        check_type="{{ .Values.proxysql.mysql.slave.checkType }}"
       }
     )
     {{- end }}
