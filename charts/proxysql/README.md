@@ -82,6 +82,8 @@ The following table lists the configurable parameters of the ProxySQL chart and 
 | `proxysql.mysql.port`                       | MySQL port                                               | `3306`                                                       |
 | `proxysql.mysql.maxConnections`             | The max num of client conn that the proxy can handle     | `2048`                                                       |
 | `proxysql.mysql.queyCacheSizeMB`            | Query cache size in MB                                   | `256`                                                        |
+| `proxysql.mysql.waitTimeout`                | mysql backend session timeout                            | `28800000`                                                   |
+| `proxysql.mysql.queryRetriesOnFailure`      | query retries on failure                                 | `2`                                                          |
 | `proxysql.mysql.readWriteSplit`             | MySQL Read/Write Splitting                               | `true`                                                       |
 | `proxysql.mysql.servers.[].isWriter`        | MySQL backend is writable                                | `true`                                                       |
 | `proxysql.mysql.servers.[].hostname`        | MySQL backend's hostname                                 | `nil`                                                        |
