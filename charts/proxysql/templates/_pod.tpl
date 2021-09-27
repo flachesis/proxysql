@@ -39,7 +39,7 @@ spec:
           port: proxysql
       readinessProbe:
         tcpSocket:
-          port: mysql
+          port: proxysql
       volumeMounts:
         - name: proxysql-config
           mountPath: /etc/proxysql.cnf
