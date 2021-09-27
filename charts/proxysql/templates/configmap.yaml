@@ -41,7 +41,7 @@ data:
       threads=4
       threshold_query_length=524288
       threshold_resultset_size=4194304
-      wait_timeout=28800000
+      wait_timeout={{ int .Values.proxysql.mysql.waitTimeout }}
       monitor_enabled={{ .Values.proxysql.monitor.enabled }}
       {{- if .Values.proxysql.monitor.enabled }}
       monitor_connect_interval=120000
