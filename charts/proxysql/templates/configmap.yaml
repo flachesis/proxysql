@@ -25,7 +25,7 @@ data:
       interfaces="0.0.0.0:{{ .Values.proxysql.mysql.port }}"
       connect_timeout_server=1500
       connect_timeout_server_max=10000
-      connection_max_age_ms=0
+      connection_max_age_ms={{ .Values.proxysql.mysql.connectionMaxAgeMS }}
       default_max_latency_ms=1500
       default_query_timeout=86400000
       long_query_time=5000

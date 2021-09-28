@@ -58,6 +58,7 @@ proxysql:
     version: "5.7.34"
     port: 3306
     maxConnections: 2048
+    connectionMaxAgeMS: 0
     queyCacheSizeMB: 256
     queryRetriesOnFailure: 2
     waitTimeout: 28800000
