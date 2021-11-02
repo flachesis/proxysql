@@ -56,9 +56,9 @@ data:
       monitor_read_only_interval=1000
       monitor_read_only_max_timeout_count=3
       monitor_read_only_timeout=1500
-      monitor_replication_lag_interval=10000
-      monitor_replication_lag_timeout=1500
-      monitor_slave_lag_when_null=60
+      monitor_replication_lag_interval={{ .Values.proxysql.monitor.replicationLagInterval }}
+      monitor_replication_lag_timeout={{ .Values.proxysql.monitor.replicationLagTimeout }}
+      monitor_slave_lag_when_null={{ .Values.proxysql.monitor.slaveLagWhenNull }}
       monitor_threads_max=128
       monitor_threads_min=8
       monitor_threads_queue_maxsize=128
@@ -104,6 +104,7 @@ data:
         weight={{ $element.weight | default 1000 }}
         compression={{ (int $element.compression) | default 0 }}
         max_connections={{ $element.maxConnections | default 1000 }}
+        max_replication_lag={{ $element.maxReplicationLag | default 0 }}
         use_ssl=0
       }{{- if lt (add1 $index) $totalServers -}},{{- end -}}
       {{- end }}

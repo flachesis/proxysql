@@ -85,6 +85,9 @@ proxysql:
   monitor:
     enabled: false
     writerAsReader: true
+    replicationLagInterval: 10000
+    replicationLagTimeout: 1500
+    slaveLagWhenNull: 60
     # user: "monitor"
     # password: "monitor"
 

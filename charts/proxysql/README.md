@@ -69,6 +69,9 @@ The following table lists the configurable parameters of the ProxySQL chart and 
 | `proxysql.monitor.user`                     | Monitor user name                                        | `nil`                                                        |
 | `proxysql.monitor.password`                 | Monitor user password                                    | `nil`                                                        |
 | `proxysql.monitor.writerAsReader`           | Add writer to reader                                     | `true`                                                       |
+| `proxysql.monitor.replicationLagInterval    | The interval of checking replication lag                 | `10000`                                                      |
+| `proxysql.monitor.replicationLagTimeout     | How long the Monitor module will wait for the output     | `1500`                                                       |
+| `proxysql.monitor.slaveLagWhenNull          | It's assumed to be the current replica lag when SBM=NULL | `60`                                                         |
 | `proxysql.cluster.enabled`                  | Enable ProxySQL cluster                                  | `false`                                                      |
 | `proxysql.cluster.user`                     | ProxySQL cluster user                                    | `cluster`                                                    |
 | `proxysql.cluster.password`                 | ProxySQL cluster password                                | `cluster`                                                    |
@@ -92,6 +95,7 @@ The following table lists the configurable parameters of the ProxySQL chart and 
 | `proxysql.mysql.servers.[].maxConnections`  | The max num of conn that the backend can handle          | `1000`                                                       |
 | `proxysql.mysql.servers.[].compression`     | Compress data                                            | `false`                                                      |
 | `proxysql.mysql.servers.[].weight`          | Server weight                                            | `1000`                                                       |
+| `proxysql.mysql.servers.[].maxReplicationLag` | Server max replica lag                                 | `0`                                                          |
 | `proxysql.mysql.users.[].username`          | The user for connecting backend                          | `nil`                                                        |
 | `proxysql.mysql.users.[].password`          | The user's password                                      | `nil`                                                        |
 | `proxysql.mysql.users.[].readOnly`          | Does the user is read only                               | `false`                                                      |
