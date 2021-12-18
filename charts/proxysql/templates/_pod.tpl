@@ -34,6 +34,9 @@ spec:
         - name: proxysql
           containerPort: {{ .Values.proxysql.port }}
           protocol: TCP
+        - name: metrics
+          containerPort: 6070
+          protocol: TCP
       livenessProbe:
         tcpSocket:
           port: proxysql
